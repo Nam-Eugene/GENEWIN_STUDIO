@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/dda80d4947.js" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function(){
+                if($(this).scrollTop() >= 300) {
+                    $('.up').fadeIn();
+                } 
+                else {
+                    $('.up').fadeOut();
+                }
+            });
+
+            $('.up').click(function(e) {
+                e.preventDefault();
+                $('html, body').stop().animate({scrollTop:0}, 500);
+            });
+
+        });
+    </script>
+    <title>DESIGN</title>
+</svg>
+    <style>
+        @font-face{
+            font-family:"helvetica-43-light-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box-wrap {
+            position: fixed;
+            z-index: 9999;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+        }
+        .btn {
+            font-family:"helvetica-43-light-extended";
+            height: 6vh;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 1em;
+            border-left: none;
+            border-top: none;
+            border-bottom: 1px solid black;
+            background-color: white;
+        }
+        .btn:first-child {
+            width: 30%;
+            margin-left: 0;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(2) {
+            width: 50% ;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(3) {
+            width: 10%;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(4) {
+            margin-right: -3px;
+            width: 10%;
+            border-right: none;
+            text-align: left;
+        }
+        .btn_2 {
+            text-decoration: none;
+            line-height: 6vh;
+            font-size: 1.1em;
+            padding-right: 10%;
+            color: black;
+        }
+        .btn_2:first-child {
+            padding-left: 2%;
+        }
+        #bar:hover {
+            cursor: url('plz.png'), auto;
+        }
+
+        #box {
+            display: float;
+            width: 100%;
+        }
+
+        .text_box {
+            font-family: 'Helvetica73', sans-serif;
+            padding-left: 0;
+            padding-top: 15em;
+            padding-bottom: 20em;
+            color: black;
+        }
+        h2 {
+            display: inline;
+            font-size: 10em;
+            margin-left: -0.1em;
+        }
+        .blink {
+            animation: blink 1.2s infinite;
+            font-size: 10em;
+        }
+
+        @keyframes blink {
+            to {
+                opacity: 0;
+            }
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-rows: 70vh 70vh 70vh;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            z-index: 20;
+            object-fit: contain;
+        }
+        .item:first-child {
+            grid-column: 1;
+            grid-row: 1;
+            background-image: url('design_plaza.jpg');
+            background-size: cover;
+            object-fit: contain;
+            background-position: center;
+            border-right: 1px solid black;
+            padding-right: 1px;
+        }
+
+        .item:nth-child(2) {
+            grid-row: 1;
+            grid-column: 2;
+            border-bottom: 1px solid black;
+        }
+        .item:nth-child(3) {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            grid-row: 2 ;
+            grid-column: 1;
+            background-image: url('case.png');
+            background-size: cover;
+            object-fit: contain;
+            background-position: center;
+            z-index: 20;
+            border-right: 1px solid black;
+            padding-right: 1px;
+        }
+        .item:nth-child(4) {
+            grid-row: 2;
+            grid-column: 2;
+            border-bottom: 1px solid black;
+            padding-bottom: 1px;
+        }
+        .item:nth-child(5) {
+            grid-row: 3;
+            grid-column: 1;
+            background-image: url('device.png');
+            background-size: cover;
+            object-fit: contain;
+            background-position: center;
+            border-right: 1px solid black;
+            padding-right: 1px;
+        }
+        .item:nth-child(6) {
+            grid-row: 3;
+            grid-column: 2;
+        }
+
+        .contents {
+            color: black;
+            float: left;
+            width: 70%;
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-bottom: 5em;
+            font-size: 1.3em;
+            line-height: 1.3em;
+            font-family:"helvetica-43-light-extended";
+        }
+        span {
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 2em;
+            -webkit-text-stroke-width: 1.4px;
+            -webkit-text-stroke-color: black;
+        }
+        .up {
+            position: fixed;
+            right: 5%;
+            bottom:10%;
+            color: black;
+            display: none;
+        }
+        h3 {
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 1.7em;
+            margin: 2%;
+            margin-bottom: 6%;
+        }
+        .sub_text {
+            width: 80%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.1em;
+            margin: 2%;
+            color: black;
+            margin-bottom: 15%;
+        }
+        .more {
+            margin-left: 2%;
+            color: black;
+            opacity: 70%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.1em;
+        }
+        .more:hover {
+            opacity: 100%;
+            cursor: pointer;
+        }
+        .footer {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 20vh;
+            }
+            .ftr:first-child {
+                width: 30%;
+                border-right :1px solid black;
+                height: 100%;
+            }
+            .ftr:nth-child(2) {
+                width: 50%;
+                border-right: 1px solid black;
+                margin-right: -2px;
+                height: 100%;
+            }
+            .ftr:nth-child(3) {
+                width: 20%;
+                height: 100%;
+            }
+            h4 {
+                font-family: 'Helvetica73', sans-serif;
+                font-size: 1.5em;
+                margin-top: 2%;
+                padding-left: 2%;
+                padding-bottom: 5%;
+            }
+            .contact {
+                text-decoration: none;
+                color: black;
+            }
+            .ftr_c {
+                display: flex;
+                flex-direction: row;
+                padding-left: 2%;
+                font-size: 1.1em;
+                font-family:"helvetica-43-light-extended";
+                line-height: 1.3em;;
+            }
+            .ftr_item {
+                width: 33.33%;
+            }
+            .ftr_item:nth-child(2) {
+                text-align: center;
+            }
+            .ftr_item:nth-child(3) {
+                text-align: right;
+                padding-right: 2%;
+            }
+        
+
+        @media screen and (max-width:900px) {
+
+            .text_box {
+                padding-top: 10em;
+                padding-bottom: 5em;
+            }
+            .blink {
+                font-size: 6em;
+            }
+            h2 {
+                font-size: 6em;
+                text-align: left;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            .container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 40vh 40vh 40vh 40vh;
+        }
+            .item:first-child {
+            border-top: 2px solid black;
+            border-bottom: none;
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 2;
+        }
+        .item:nth-child(2) {
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left:none;
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .item:nth-child(3) {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left: 2px solid black;
+            grid-column: 2;
+        }
+        .item:nth-child(4) {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left:none;
+            grid-row: 4;
+            grid-column: 1 / span2;
+        }
+        .item:nth-child(5) {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left:none;
+            grid-row: 4;
+            grid-column: 1 / span2;
+        }
+        .item:nth-child() {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left:none;
+            grid-row: 4;
+            grid-column: 1 / span2;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="box-wrap">
+        <div class="btn" onclick="location.href='index.html'"><img src="barcode.png" style="height: 4vh; padding: 0.4em" id="bar"></div>
+        <div class="btn">
+            <a class="btn_2" href="about.html">About</a>
+            <a class="btn_2" href="design.html">Design</a>
+            <a class="btn_2" href="work.html">Work</a>
+        </div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+    </div>
+    <div class="text_box">
+        <h2 class="text"></h2>
+        <span class="blink">|</span>
+        <script src="script2.js"></script>
+    </div>
+    <div class="container">
+        <div class="item" style="width: 100%; height:100%;"></div>
+        <div class="item" style="width: 100%; height:100%;">
+            <h3>DDP PRODUCT DESIGN</h3>
+            <p class="sub_text">what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+            </p>
+            <p class="more" onclick="location.href='ddp.html'">&#x226B; More</p>
+        </div>
+        <div class="item" style="width: 100%; height:100%;"></div>
+        <div class="item" style="width: 100%; height:100%;">
+            <h3>PRODUCTS DESIGN</h3>
+            <p class="sub_text">what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+            </p>
+            <p class="more" onclick="location.href='product.html'">&#x226B; More</p>
+        </div>
+        <div class="item" style="width: 100%; height:100%;"></div>
+        <div class="item" style="width: 100%; height:100%;">
+            <h3>WEB DESIGN</h3>
+            <p class="sub_text">what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+                what is like and love of the what is wokdjklfds
+            </p>
+            <p class="more" onclick="location.href='web.html'">&#x226B; More</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="ftr">
+            <h4>GENEWIN_STUDIO</h4>
+            <div class="ftr_c">
+            <p>This website was created as a final assignment for the Network Media class</p>
+            </div>
+        </div>
+        <div class="ftr"></div>
+        <div class="ftr">
+            <h4>CONTACT</h4>
+            <div class="ftr_c">
+                <div class="ftr_item">
+                    <a href="https://www.instagram.com/genewin_studio/"class="contact"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+                </div>
+                <div class="ftr_item">
+                     <a href="https://www.youtube.com/channel/UCfA4tjvwjLIwl52sE6A7ndw" class="contact" style="color: red;"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                </div>
+                <div class="ftr_item">
+                    <a href="mailto:skadbwls79@naver.com" class="contact" style="color: navy"><i class="fa-sharp fa-solid fa-envelope fa-2x"></i></a>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
