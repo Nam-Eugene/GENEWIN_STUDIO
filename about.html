@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dda80d4947.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        $(function () {
+            $(window).scroll(function(){
+                if($(this).scrollTop() >= 300) {
+                    $('.up').fadeIn();
+                } 
+                else {
+                    $('.up').fadeOut();
+                }
+            });
+
+            $('.up').click(function(e) {
+                e.preventDefault();
+                $('html, body').stop().animate({scrollTop:0}, 500);
+            });
+
+        });
+    </script>
+    <title>ABOUT</title>
+    <style>
+        @font-face{
+            font-family:"helvetica-43-light-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box-wrap {
+            position: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+            z-index: 9999;
+        }
+        .btn {
+            font-family:"helvetica-43-light-extended";
+            height: 6vh;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 1em;
+            border-left: none;
+            border-top: none;
+            border-bottom: 1px solid black;
+            background-color: white;
+        }
+        .btn:first-child {
+            width: 30%;
+            margin-left: 0;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(2) {
+            width: 50% ;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(3) {
+            width: 10%;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(4) {
+            margin-right: -3px;
+            width: 10%;
+            border-right: none;
+            text-align: left;
+        }
+        .btn_2 {
+            text-decoration: none;
+            line-height: 6vh;
+            font-size: 1.1em;
+            padding-right: 10%;
+            color: black;
+        }
+        .btn_2:first-child {
+            padding-left: 2%;
+        }
+        #box {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .text_box {
+            font-family: 'Helvetica73', sans-serif;
+            padding-left: 0;
+            padding-top: 15em;
+            padding-bottom: 20em;
+            color: black;
+        }
+        h2 {
+            display: inline;
+            font-size: 10em;
+        }
+        .blink {
+            animation: blink 1.2s infinite;
+            font-size: 10em;
+        }
+
+        @keyframes blink {
+            to {
+                opacity: 0;
+            }
+        }
+        .b1 {
+            width: 46%;
+            padding: 2%;
+            border-right: 1px black solid;
+        }
+        .b2 {
+            width: 50%;
+        }
+        .absolute {
+            width: 100%;
+            height: 100%;
+        }
+
+        .contents {
+            color: black;
+            float: left;
+            font-size: 1.1em;
+            line-height: 1.3em;
+            font-family:"helvetica-43-light-extended";
+        }
+        span {
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 2em;
+        }
+
+        .art {
+            width: 100%;
+            margin-bottom: -0.3%;
+            object-fit: contain;
+        }
+        .ddp {
+            width: 100%;
+            margin-bottom: -0.2%;
+            object-fit: contain;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid black;
+        }
+        .ttt {
+            width: 70%;
+            border-left: 1px solid black;
+            margin-right: -1px;
+        }
+        .bbb {
+            width: 28%;
+            height: 100%;
+            padding: 0 1%;
+        }
+        .view {
+            font-family:"helvetica-43-light-extended";
+            font-weight: bold;
+            font-size: 2em;
+            line-height: 30vh;
+            text-decoration: none;
+            color: black;
+        }
+        .xpp {
+            color: black;
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 2em;
+            font-weight: bolder;
+            padding-top: 0.5em;
+        }
+        .xpp_c {
+            width: 100%;
+            font-family:"helvetica-43-light-extended";
+            padding-top: 0.8em;
+            padding-bottom: 1.8em;
+            font-size: 1.1em;
+            line-height: 1.3em;
+        }
+        .xpp_btn {
+            margin-left: 1.4em;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.7em;
+            font-weight: bolder;
+            background-color: white;
+            border: 2px solid black;
+            margin-bottom: 10em;
+            padding: 0.2em;
+        }
+        .xpp_btn:hover {
+            background-color: black;
+            color: white;
+        }
+        img.bar:hover {
+            cursor: url(e_cursor.png), auto;
+        }
+        .up {
+            position: fixed;
+            right: 5%;
+            bottom:10%;
+            color: black;
+            display: none;
+        }
+
+        .flow-text {
+	        display: flex;
+            flex: 0 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: 0.3s;
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 5em;
+            color: black;
+            padding: 1em 0;
+            border-bottom: 1px solid black;
+        }
+
+        .flow-wrap {
+            animation: textLoop 10s linear infinite;
+            padding-right: 1.4881vw;
+        }
+  
+        @keyframes textLoop {
+            0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            }
+            100% {
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }       
+        }
+        .footer {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 20vh;
+            }
+            .ftr:first-child {
+                width: 30%;
+                border-right :1px solid black;
+                margin-right: -2px;
+                height: 100%;
+            }
+            .ftr:nth-child(2) {
+                width: 50%;
+                border-right: 1px solid black;
+                margin-right: -2px;
+                height: 100%;
+            }
+            .ftr:nth-child(3) {
+                width: 20%;
+                height: 100%;
+            }
+            h4 {
+                font-family: 'Helvetica73', sans-serif;
+                font-size: 1.5em;
+                margin-top: 2%;
+                padding-left: 2%;
+                padding-bottom: 5%;
+            }
+            .contact {
+                text-decoration: none;
+                color: black;
+            }
+            .ftr_c {
+                display: flex;
+                flex-direction: row;
+                padding-left: 2%;
+                font-size: 1.1em;
+                font-family:"helvetica-43-light-extended";
+                line-height: 1.3em;;
+            }
+            .ftr_item {
+                width: 33.33%;
+            }
+            .ftr_item:nth-child(2) {
+                text-align: center;
+            }
+            .ftr_item:nth-child(3) {
+                text-align: right;
+                padding-right: 2%;
+            }
+            .more {
+                font-size: 1.1em;
+                font-family:"helvetica-43-light-extended";
+                color: black;
+                opacity: 70%;
+            }
+            .more:hover {
+                opacity: 100%;
+                cursor: pointer;
+            }
+
+        @media screen and (max-width:900px) {
+            #box {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .b2 {
+                width: 100%;
+                height: auto;
+            }
+            .b1 {
+                width: 100%;
+            }
+            .text_box {
+                padding-top: 10em;
+                padding-bottom: 5em;
+            }
+            .blink {
+                font-size: 6em;
+            }
+            h2 {
+                font-size: 6em;
+                text-align: left;
+                padding-bottom: 0.5em;
+            }
+            span {
+                font-size: 2em;
+            }
+            p.contents {
+                padding-left: 1em;
+                width: 80%;
+                padding-top: 1em;
+                padding-bottom: 2em;
+                font-size: 1.2em;
+            }
+            .ttt {
+                width: 65%;
+            }
+            .bbb {
+                width: 35%;
+                margin: auto;
+            }
+            .xpp {
+                padding-left: 0.6em;
+                font-size: 1.8em;
+                font-weight: bolder;
+                padding-top: 0.5em;
+            }
+            .xpp_c {
+                font-size: 1.2em;
+                padding-left: 1em;
+                padding-bottom: 0.8em;
+            }
+            .xpp_btn {
+                font-size: 1.2em;
+                margin-left: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        AOS.init();
+      </script>
+    <div class="box-wrap">
+        <div class="btn" onclick="location.href='index.html'"><img src="barcode.png" style="height: 4vh; padding: 0.4em" id="bar"></div>
+        <div class="btn">
+            <a class="btn_2" href="about.html">About</a>
+            <a class="btn_2" href="design.html">Design</a>
+            <a class="btn_2" href="work.html">Work</a>
+        </div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+    </div>
+    <div class="text_box">
+        <h2 class="text"></h2>
+        <span class="blink">|</span>
+        <script src="script.js"></script>
+    </div>
+    
+    <div id="box">
+        <div class="b1">
+            <p class="contents" data-aos="fade-right" data-aos-offset="300" data-aos-duration="800"><span>Eugene Nam</span><br><br><br>
+            Nam Yu-jin is attending Sogang University's Department of Art and Technology.
+            She is mainly working on UI/UX and 2D graphic design. <br><br>
+            Inspired by pure and beautiful things, <br>
+            dreaming of someday becoming a person like a mushroom soup full of forest scent, 
+            like a sunset reflected on the outer wall of the building.</p>       
+            </p>
+        </div>
+        <div class="b2">
+            <img src="profile.jpg" class="absolute" data-aos="fade-left" data-aos-offset="300" data-aos-duration="800">
+        </div>
+    </div>
+    <div class="flow-container">
+        <div class="flow-text">
+            <div class="flow-wrap">Main Works Below &#129047; &nbsp; </div>
+            <div class="flow-wrap">Main Works Below &#129047; &nbsp;</div>
+            <div class="flow-wrap">Main Works Below &#129047; &nbsp;</div>
+            <div class="flow-wrap">Main Works Below &#129047; &nbsp;</div>
+        </div>
+        <div>
+            <div>
+                    <div class="container">
+                        <div class="bbb" data-aos="zoom" data-aos-duration="1000">
+                            <p class="xpp">DDP Designer</p>
+                            <p class="xpp_c">
+                                Designed conceptual products for DDP
+                            </p>
+                            <p class="more" onclick="location.href='ddp.html'">&#x226B; More</p>
+                        </div>
+                        <div class="ttt" data-aos="zoom" data-aos-duration="600">
+                            <img src="design_ddp.png" class="ddp" data-aos="zoom" data-aos-duration="1000">
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <div class="bbb" data-aos="zoom" data-aos-duration="1000">
+                    <p class="xpp">X(P, P)</p>
+                    <p class="xpp_c">
+                        An art work that makes you think about what your phase is through total experience
+                    </p>
+                    <p class="more" onclick="location.href='work.html'">&#x226B; More</p>
+                </div>
+                <div class="ttt" data-aos="zoom" data-aos-duration="600">
+                    <img src="thumb_x.png" class="art" data-aos="zoom" data-aos-duration="1000">
+                </div>
+            </div>
+    </div>
+    <div class="footer">
+        <div class="ftr">
+            <h4>GENEWIN_STUDIO</h4>
+            <div class="ftr_c">
+            <p>This website was created as a final assignment for the Network Media class</p>
+            </div>
+        </div>
+        <div class="ftr"></div>
+        <div class="ftr">
+            <h4>CONTACT</h4>
+            <div class="ftr_c">
+                <div class="ftr_item">
+                    <a href="https://www.instagram.com/genewin_studio/"class="contact"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+                </div>
+                <div class="ftr_item">
+                     <a href="https://www.youtube.com/channel/UCfA4tjvwjLIwl52sE6A7ndw" class="contact" style="color: red;"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                </div>
+                <div class="ftr_item">
+                    <a href="mailto:skadbwls79@naver.com" class="contact" style="color: navy"><i class="fa-sharp fa-solid fa-envelope fa-2x"></i></a>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
