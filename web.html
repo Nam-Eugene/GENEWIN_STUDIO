@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDP Product</title>
+    <style>
+        @font-face{
+            font-family:"helvetica-43-light-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #bar:hover {
+            cursor: url('e_cursor.png'), pointer;
+        }
+        #box {
+            display: float;
+            width: 100%;
+        }
+        .back {
+            margin-left: 0.5em;
+            margin-top: 4vh;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.7em;
+            font-weight: bolder;
+            color: black;
+            border: none;
+            padding: 0.2em;
+        }
+        .back:hover {
+            color: #FDB827;
+            cursor: pointer;
+        }
+
+        .text_box {
+            font-family: 'Helvetica73', sans-serif;
+            padding-left: 0;
+            padding-top: 10em;
+            padding-bottom: 10em;
+            color: black;
+        }
+        h2 {
+            display: inline;
+            font-size: 6em;
+            margin-left: -0.1em;
+        }
+        .blink {
+            animation: blink 1.2s infinite;
+            font-size: 6em;
+            animation-iteration-count: 4;
+        }
+
+        @keyframes blink {
+            to {
+                opacity: 0;
+            }
+        }
+
+        h4 {
+            color: black;
+            float: left;
+            width: 70%;
+            padding-left: 5%;
+            padding-bottom: 2em;
+            font-size: 2em;
+            font-weight: bolder;
+            line-height: 1.3em;
+            font-family: 'Helvetica73', sans-serif;
+        }
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .pro {
+            width: 40%;
+            padding-bottom: 1em;
+        }
+        .pro-txt {
+            width: 40%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.3em;
+            padding-left: 2em;
+            line-height: 150%;
+        }
+        img:first-child {
+            width: 50%;
+        }
+        img:nth-child(2) {
+            width: 50%;
+        }
+        span {
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 2em;
+            -webkit-text-stroke-width: 1.4px;
+            -webkit-text-stroke-color: black;
+        }
+        .prototype{
+            width: 80%;
+            padding-top: 1.5em;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.3em;
+            padding-left: 1.7em;
+            line-height: 150%;
+            padding-bottom: 10em;
+        }
+        video {
+            margin-bottom: 2em;
+            margin-left: 5%;
+        }
+        .em1 {
+            width: 49%; 
+            height: 80vh; 
+            margin-right:2%;
+        }
+        .em2 {
+            width: 49%; 
+            height: 80vh; 
+            margin-bottom:10em;
+        }
+        .atc_web {
+            margin-left: 5%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.7em;
+            font-weight: bolder;
+            background-color: white;
+            border: 2px solid black;
+            color: black;
+            margin-bottom: 10em;
+            padding: 0.2em;
+        }
+        .atc_web:hover {
+            background-color: #ff5e5a;
+            color: white;
+            border: 2px solid #ff5e5a;
+        }
+
+        @media screen and (max-width:900px) {
+
+            .text_box {
+                padding-top: 10em;
+                padding-bottom: 5em;
+            }
+            .blink {
+                font-size: 4em;
+            }
+            h2 {
+                font-size: 4em;
+                text-align: left;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            .flexbox {
+                flex-direction: column;
+                width: 100%;
+            }
+            img:first-child {
+                width: 100%;
+            }
+            img:nth-child(2) {
+                width: 100%;
+            }
+            .pro-txt {
+                width: 80%;
+            }
+            .em1 {
+                width: 100%;
+            }
+            .em2 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="back" onclick="location.href='design.html'">&larr; Back to Design</p>
+    </div>
+    <div class="text_box">
+        <h2 class="text"></h2>
+        <span class="blink">|</span>
+        <script src="script_web.js"></script>
+    </div>
+    <div>
+        <h4>#1. Prototype</h4>
+    </div>
+    <div class="flexbox">
+        <embed src="web_wireframe.pdf" class="em1">
+        <embed src="Wireframe Archive 2.pdf" class="em2">
+    </div>
+    <div>
+        <h4>#2. Web Page</h4>
+    </div>
+    <div>
+        <video src="atcweb.mp4" width="90%" controls autoplay></video>
+    </div>
+    <div>
+        <button class="atc_web" onclick="location.href='http://2022atc.com/'"> &rarr; View Website </button>
+    </div>

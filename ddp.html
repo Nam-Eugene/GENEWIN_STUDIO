@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDP Product</title>
+    <style>
+        @font-face{
+            font-family:"helvetica-43-light-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #bar:hover {
+            cursor: url('e_cursor.png'), pointer;
+        }
+        #box {
+            display: float;
+            width: 100%;
+        }
+        .back {
+            margin-left: 0.5em;
+            margin-top: 4vh;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.7em;
+            font-weight: bolder;
+            color: black;
+            border: none;
+            padding: 0.2em;
+        }
+        .back:hover {
+            color: #FDB827;
+            cursor: pointer;
+        }
+
+        .text_box {
+            font-family: 'Helvetica73', sans-serif;
+            padding-left: 0;
+            padding-top: 10em;
+            padding-bottom: 10em;
+            color: black;
+        }
+        h2 {
+            display: inline;
+            font-size: 6em;
+            margin-left: -0.1em;
+        }
+        .blink {
+            animation: blink 1.2s infinite;
+            font-size: 6em;
+            animation-iteration-count: 4;
+        }
+
+        @keyframes blink {
+            to {
+                opacity: 0;
+            }
+        }
+
+        h4 {
+            color: black;
+            float: left;
+            width: 70%;
+            padding-left: 1em;
+            padding-bottom: 2em;
+            font-size: 2em;
+            font-weight: bolder;
+            line-height: 1.3em;
+            font-family: 'Helvetica73', sans-serif;
+        }
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .flexbox3 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .pro {
+            width: 40%;
+            padding-bottom: 1em;
+        }
+        .final-txt {
+            width: 40%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.3em;
+            margin-left: 2.5%;
+            margin-right: 7.5%;
+            line-height: 150%;
+        }
+        .pro-txt {
+            width: 40%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.3em;
+            padding-left: 2em;
+            line-height: 150%;
+        }
+        .final {
+            width: 60%;
+            height: auto;
+        }
+        .txt {
+            font-family:"helvetica-43-light-extended";
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        img:first-child {
+            width: 50%;
+        }
+        img:nth-child(2) {
+            width: 50%;
+        }
+        span {
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 2em;
+            -webkit-text-stroke-width: 1.4px;
+            -webkit-text-stroke-color: black;
+        }
+        .prototype{
+            width: 80%;
+            padding-top: 1.5em;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.3em;
+            padding-left: 1.7em;
+            line-height: 150%;
+            padding-bottom: 10em;
+        }
+
+        @media screen and (max-width:900px) {
+
+            .text_box {
+                padding-top: 10em;
+                padding-bottom: 5em;
+            }
+            .blink {
+                font-size: 4em;
+            }
+            h2 {
+                font-size: 4em;
+                text-align: left;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            .flexbox {
+                flex-direction: column;
+            }
+            img:first-child {
+                width: 100%;
+            }
+            img:nth-child(2) {
+                width: 100%;
+            }
+            .pro-txt {
+                width: 80%;
+            }
+            .flexbox3 {
+                flex-direction: column-reverse;
+            }
+            .final-txt {
+                width: 80%;
+                padding-left: 1em;
+            }
+            .final {
+                margin-bottom: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="back" onclick="location.href='design.html'">&larr; Back to Design</p>
+    </div>
+    <div class="text_box">
+        <h2 class="text"></h2>
+        <span class="blink">|</span>
+        <script src="script_ddp.js"></script>
+    </div>
+    <div>
+        <h4>#1. Prototype</h4>
+    </div>
+    <div class="flexbox">
+        <img src="ddp_case.png">
+        <img src="ddp_prototype.png">
+        <p class="prototype">
+            I planned two products, 
+            iPhone and iPad case, reflecting my experience of purchasing a cell phone and tablet 
+            first than anything else as soon as I became a college student. 
+            The overall design borrows the receipt design, which serves as a token 
+            of purchase and an archive of memories that evokes small memories of the day.
+        </p>
+    </div>
+    <h4>#2. Process</h4>
+    <div class="flexbox">
+        <img src="making1.jpg" class="pro">
+        <p class="pro-txt">
+            The fabric and all parts were purchased in the Sinseol-dong market, 
+            and the sample production was completed in the market.
+        </p>
+    </div>
+    <h4 style="padding-top: 7em;">#3. Final Products</h4>
+    <div class="flexbox3">
+        <p class="final-txt">
+            <span class="txt">1. I-Phone Case</span> <br>
+            Two types: Transparent Jelly & Hard <br>
+            Two versions: Contains Object itself & No graphic in the middle (Use with Grip-tok)
+            <br><br>
+            <span class="txt">2. I-Pad Pouch</span> <br>
+            Material: Tyvek, Toilon, Suede <br>
+            Feature: Can be easily opened and closed with the zipper on the top, and has a band to 
+            insert an apple pencil. 
+            <br><br>
+            <span class="txt">3. Tyvek Eco-Bag</span> <br>
+            Material: Tyvek, Toilon, Nylon <br>
+            Feature: Eco-friendly by using tyvek material and contains 
+            buffer materials in order to protect items inside the bag.
+        </p>
+        <img src="product.png" class="final">
+    </div>
+    <h4 style="padding-top: 7em;">#4. Display</h4>
+    <div class="flexbox" style="margin-bottom: 10em;">
+        <img src="display1.jpg" style="width:49%; height: auto; margin-right: 2%;">
+        <img src="display2.jpg" style="width:49%; height: auto;">
+    </div>

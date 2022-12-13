@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/dda80d4947.js" crossorigin="anonymous"></script>
+    <title>DDP Product</title>
+    <style>
+        @font-face{
+            font-family:"helvetica-43-light-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box-wrap {
+            position: fixed;
+            z-index: 9999;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+        }
+        .btn {
+            font-family:"helvetica-43-light-extended";
+            height: 6vh;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 1.1em;
+            border-left: none;
+            border-top: none;
+            border-bottom: 1px solid black;
+            background-color: white;
+        }
+        .btn:first-child {
+            width: 30%;
+            margin-left: 0;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(2) {
+            width: 50% ;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(3) {
+            width: 10%;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(4) {
+            margin-right: -3px;
+            width: 10%;
+            border-right: none;
+            text-align: left;
+        }
+        .btn_2 {
+            text-decoration: none;
+            line-height: 6vh;
+            font-size: 1.1em;
+            padding-right: 10%;
+            color: black;
+        }
+        .btn_2:first-child {
+            padding-left: 2%;
+        }
+        #bar:hover {
+            cursor: url('e_cursor.png'), pointer;
+        }
+        #box {
+            display: float;
+            width: 100%;
+        }
+
+        .text_box {
+            font-family: 'Helvetica73', sans-serif;
+            padding-left: 0;
+            padding-top: 10em;
+            padding-bottom: 10em;
+            color: black;
+        }
+        h2 {
+            display: inline;
+            font-size: 6em;
+            margin-left: -0.1em;
+        }
+        .blink {
+            animation: blink 1.2s infinite;
+            font-size: 6em;
+            animation-iteration-count: 4;
+        }
+
+        @keyframes blink {
+            to {
+                opacity: 0;
+            }
+        }
+
+        h4 {
+            color: black;
+            width: 100%;
+            padding: 1% 5%;
+            font-size: 1.7em;
+            line-height: 1.3em;
+            font-family: 'Helvetica73', sans-serif;
+            border-top: 1px solid black;
+        }
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        span {
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 2em;
+            -webkit-text-stroke-width: 1.4px;
+            -webkit-text-stroke-color: black;
+        }
+        .case {
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.1em;
+            line-height: 150%;
+            padding: 2%;
+        }
+        .insta {
+            margin-left: 5%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.5em;
+            font-weight: bolder;
+            background-color: white;
+            border: 2px solid black;
+            margin-bottom: 10em;
+            padding: 0.2em;
+        }
+        .insta:hover {
+            background-color: black;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .item {
+            width: 80%;
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+            padding-right: 1px;
+        }
+        
+        .ttt {
+            width: 20%;
+            margin-right: -2px;
+            border-top: 1px solid black;
+        }
+        .ttt2 {
+            width: 30%;
+            border-top: 1px solid black;
+        }
+        .item2 {
+            width: 70%;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            margin-right: -1px;
+        }
+        .flow-text {
+	        display: flex;
+            flex: 0 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: 0.3s;
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 5em;
+            color: black;
+            padding: 1em 0;
+            border-top: 1px solid black;
+        }
+
+        .flow-wrap {
+            animation: textLoop 10s linear infinite;
+            padding-right: 1.4881vw;
+        }
+        @keyframes textLoop {
+            0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            }
+            100% {
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }       
+        }
+        
+        .footer {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 20vh;
+                border-top: 1px solid black;
+            }
+            .ftr:first-child {
+                width: 30%;
+                border-right :1px solid black;
+                margin-right: -2px;
+                height: 100%;
+            }
+            .ftr:nth-child(2) {
+                width: 50%;
+                border-right: 1px solid black;
+                margin-right: -2px;
+                height: 100%;
+            }
+            .ftr:nth-child(3) {
+                width: 20%;
+                height: 100%;
+            }
+            h5 {
+                font-family: 'Helvetica73', sans-serif;
+                font-size: 1.5em;
+                margin-top: 2%;
+                padding-left: 2%;
+                padding-bottom: 5%;
+            }
+            .contact {
+                text-decoration: none;
+                color: black;
+            }
+            .ftr_c {
+                display: flex;
+                flex-direction: row;
+                padding-left: 2%;
+                font-size: 1.1em;
+                font-family:"helvetica-43-light-extended";
+                line-height: 1.3em;;
+            }
+            .ftr_item {
+                width: 33.33%;
+            }
+            .ftr_item:nth-child(2) {
+                text-align: center;
+            }
+            .ftr_item:nth-child(3) {
+                text-align: right;
+            }
+
+        @media screen and (max-width:900px) {
+
+            .text_box {
+                padding-top: 10em;
+                padding-bottom: 5em;
+            }
+            .blink {
+                font-size: 4em;
+            }
+            h2 {
+                font-size: 4em;
+                text-align: left;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            .flexbox {
+                flex-direction: column;
+                width: 100%;
+            }
+            img:first-child {
+                width: 100%;
+            }
+            img:nth-child(2) {
+                width: 100%;
+            }
+            .pro-txt {
+                width: 80%;
+            }
+            .em1 {
+                width: 100%;
+            }
+            .em2 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box-wrap">
+        <div class="btn" onclick="location.href='index.html'"><img src="barcode.png" style="height: 4vh; padding: 0.4em" id="bar"></div>
+        <div class="btn">
+            <a class="btn_2" href="about.html">About</a>
+            <a class="btn_2" href="design.html">Design</a>
+            <a class="btn_2" href="work.html">Work</a>
+        </div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+    </div>
+
+    <div class="text_box">
+        <h2 class="text"></h2>
+        <span class="blink">|</span>
+        <script src="script_product.js"></script>
+    </div>
+
+    <div class="container">
+        <div class="item">
+            <img src="case.png" style="width: 100%; height: auto;">
+        </div>
+        <div class="ttt">
+            <p class="case">
+                Pursue a neat, simple, yet witty design.
+                For purchase inquiries, click the button below!
+            </p>
+        </div>
+    </div>
+    <div class="flow-container">
+        <div class="flow-text">
+            <div class="flow-wrap">Ready-To-Sell &#129047; &nbsp; </div>
+            <div class="flow-wrap">Ready-To-Sell &#129047; &nbsp;</div>
+            <div class="flow-wrap">Ready-To-Sell &#129047; &nbsp;</div>
+            <div class="flow-wrap">Ready-To-Sell &#129047; &nbsp;</div>
+        </div>
+
+    <div class="container">
+        <div class="ttt2">
+            <p class="case">
+                Pursue a neat, simple, yet witty design.
+                For purchase inquiries, click the button below!
+            </p>
+        </div>
+        <div class="item2">
+            <img src="pad.jpg" style="width: 100%; height: 100%; margin-right: -2px;">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ttt2">
+            <p class="case">
+                Pursue a neat, simple, yet witty design.
+                For purchase inquiries, click the button below!
+            </p>
+        </div>
+        <div class="item2">
+            <img src="bag.jpg" style="width: 100%; height: 100%;">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="ftr">
+            <h5>GENEWIN_STUDIO</h5>
+            <div class="ftr_c">
+            <p>This website was created as a final assignment for the Network Media class</p>
+            </div>
+        </div>
+        <div class="ftr"></div>
+        <div class="ftr">
+            <h5>CONTACT</h5>
+            <div class="ftr_c">
+                <div class="ftr_item">
+                    <a href="https://www.instagram.com/genewin_studio/"class="contact"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+                </div>
+                <div class="ftr_item">
+                     <a href="https://www.youtube.com/channel/UCfA4tjvwjLIwl52sE6A7ndw" class="contact" style="color: red;"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                </div>
+                <div class="ftr_item">
+                    <a href="mailto:skadbwls79@naver.com" class="contact" style="color: navy"><i class="fa-sharp fa-solid fa-envelope fa-2x"></i></a>
+                </div>
+        </div>
+        </div>
+    </div>
