@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/dda80d4947.js" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function(){
+                if($(this).scrollTop() >= 300) {
+                    $('.up').fadeIn();
+                } 
+                else {
+                    $('.up').fadeOut();
+                }
+            });
+
+            $('.up').click(function(e) {
+                e.preventDefault();
+                $('html, body').stop().animate({scrollTop:0}, 500);
+            });
+
+        });
+    </script>
+    <title>WORK</title>
+    <style>
+        @font-face{
+            font-family:"helvetica-43-light-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box-wrap {
+            position: fixed;
+            z-index: 20;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
+        }
+        .btn {
+            font-family:"helvetica-43-light-extended";
+            height: 6vh;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 1em;
+            border-left: none;
+            border-top: none;
+            border-bottom: 1px solid black;
+            background-color: white;
+        }
+        .btn:first-child {
+            width: 30%;
+            margin-left: 0;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(2) {
+            width: 50% ;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(3) {
+            width: 10%;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(4) {
+            margin-right: -3px;
+            width: 10%;
+            border-right: none;
+            text-align: left;
+        }
+        .btn_2 {
+            text-decoration: none;
+            line-height: 6vh;
+            font-size: 1.1em;
+            padding-right: 10%;
+            color: black;
+        }
+        .btn_2:first-child {
+            padding-left: 2%;
+        }
+        #bar:hover {
+            cursor: url('e_cursor.png'), pointer;
+        }
+        .fa-sharp fa-solid fa-hashtag {
+            color: black;
+        }
+        .text_box {
+            font-family: 'Helvetica73', sans-serif;
+            padding-left: 0;
+            padding-top: 15em;
+            padding-bottom: 15em;
+            color: black;
+        }
+        h2 {
+            display: inline;
+            font-size: 10em;
+            margin-left: -0.1em;
+        }
+        .blink {
+            animation: blink 1.2s infinite;
+            font-size: 10em;
+        }
+        @keyframes blink {
+            to {
+                opacity: 0;
+            }
+        }
+        span {
+            font-family: 'Helvetica73', sans-serif;
+            font-size: 2em;
+            -webkit-text-stroke-width: 1.4px;
+            -webkit-text-stroke-color: black;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 1px solid black;
+        }
+        .item:first-child {
+            width: 80%;
+            margin-left: 1px;
+        }
+        .item:nth-child(2) {
+            width: 20%;
+            margin-right: -1px;
+            border-top: 1px solid black;
+        }
+        h4 {
+            color: black;
+            width: 70%;
+            padding: 1% 5%;
+            font-size: 1.3em;
+            line-height: 1.3em;
+            font-family: 'Helvetica73', sans-serif;
+            
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            border-right: 1px solid black;
+        }
+        .prototype{
+            width: 70%;
+            padding: 2em 0;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.3em;
+            padding-left: 5%;
+            line-height: 150%;
+        }
+        .inbag {
+            width: 90%; 
+            height: 90vh; 
+            margin-left:5%;
+            margin-bottom: 10em;
+        }
+        .up {
+            position: fixed;
+            right: 5%;
+            bottom:10%;
+            color: black;
+            display: none;
+        }
+
+        @media screen and (max-width:900px) {
+
+            .text_box {
+                padding-top: 10em;
+                padding-bottom: 5em;
+            }
+            .blink {
+                font-size: 6em;
+            }
+            h2 {
+                font-size: 6em;
+                text-align: left;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-wrap">
+        <div class="btn" onclick="location.href='index.html'"><img src="barcode.png" style="height: 4vh; padding: 0.4em" id="bar"></div>
+        <div class="btn">
+            <a class="btn_2" href="about.html">About</a>
+            <a class="btn_2" href="design.html">Design</a>
+            <a class="btn_2" href="work.html">Work</a>
+        </div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+    </div>
+    <div class="text_box">
+        <h2 class="text"></h2>
+        <span class="blink">|</span>
+        <script src="script_work.js"></script>
+    </div>
+    <div class="container">
+        <div class="item">
+            <video src="https://www.youtube.com/embed/ymXN1EX6vjI" width="100%;" controls autoplay></video>
+        </div>
+        <div class="item"><h4>UI/UX Project: InBag</h4></div>
+        
+    </div>
+    <div>
+        <p class="prototype">
+            I planned two products, 
+            iPhone and iPad case, reflecting my experience of purchasing a cell phone and tablet 
+            first than anything else as soon as I became a college student. 
+            The overall design borrows the receipt design, which serves as a token 
+            of purchase and an archive of memories that evokes small memories of the day.
+        </p>
+    </div>
+    <div class="container">
+        <div class="item">
+            <video src="https://www.youtube.com/embed/ymXN1EX6vjI" width="100%;" controls autoplay></video>
+        </div>
+        <div class="item"><h4>X(P, P)</h4></div>
+        
+    </div>
+    <div>
+        <p class="prototype">
+            I planned two products, 
+            iPhone and iPad case, reflecting my experience of purchasing a cell phone and tablet 
+            first than anything else as soon as I became a college student. 
+            The overall design borrows the receipt design, which serves as a token 
+            of purchase and an archive of memories that evokes small memories of the day.
+        </p>
+    </div>
+</body>
+</html>
