@@ -4,41 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dda80d4947.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>DDP Product</title>
     <style>
         @font-face{
             font-family:"helvetica-43-light-extended";
             src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
             url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
-            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");
+            }
+        
+            @font-face {
+            font-family:"helvetica-73-bold-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51383/HelveticaNeue-BoldExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51383/HelveticaNeue-BoldExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51383/HelveticaNeue-BoldExt.otf") format("truetype");
+        }
         * {
             margin: 0;
             padding: 0;
         }
-        #bar:hover {
-            cursor: url('e_cursor.png'), pointer;
-        }
-        #box {
-            display: float;
+        .box-wrap {
+            position: fixed;
+            z-index: 9999;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
             width: 100%;
         }
-        .back {
-            margin-left: 0.5em;
-            margin-top: 4vh;
+        .btn {
             font-family:"helvetica-43-light-extended";
-            font-size: 1.7em;
-            font-weight: bolder;
+            height: 6vh;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 1.1em;
+            border-left: none;
+            border-top: none;
+            border-bottom: 1px solid black;
+            background-color: white;
+        }
+        .btn:first-child {
+            width: 30%;
+            margin-left: 0;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(2) {
+            width: 50% ;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(3) {
+            width: 10%;
+            border-right: 1px solid black;
+            text-align: left;
+        }
+        .btn:nth-child(4) {
+            margin-right: -3px;
+            width: 10%;
+            border-right: none;
+            text-align: left;
+        }
+        .btn_2 {
+            text-decoration: none;
+            line-height: 6vh;
+            font-size: 1.1em;
+            padding-right: 10%;
             color: black;
-            border: none;
-            padding: 0.2em;
         }
-        .back:hover {
-            color: #FDB827;
-            cursor: pointer;
+        .btn_2:first-child {
+            padding-left: 2%;
         }
-
         .text_box {
-            font-family: 'Helvetica73', sans-serif;
+            font-family:"helvetica-73-bold-extended";
             padding-left: 0;
             padding-top: 10em;
             padding-bottom: 10em;
@@ -52,7 +93,6 @@
         .blink {
             animation: blink 1.2s infinite;
             font-size: 6em;
-            animation-iteration-count: 4;
         }
 
         @keyframes blink {
@@ -61,22 +101,13 @@
             }
         }
 
-        h4 {
-            color: black;
-            float: left;
-            width: 70%;
-            padding-left: 1em;
-            padding-bottom: 2em;
-            font-size: 2em;
-            font-weight: bolder;
-            line-height: 1.3em;
-            font-family: 'Helvetica73', sans-serif;
-        }
+
         .flexbox {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             width: 100%;
+            border-top: 1px solid black;
         }
         .flexbox3 {
             display: flex;
@@ -84,64 +115,143 @@
             flex-wrap: wrap;
             width: 100%;
         }
-        .pro {
-            width: 40%;
-            padding-bottom: 1em;
-        }
-        .final-txt {
-            width: 40%;
-            font-family:"helvetica-43-light-extended";
-            font-size: 1.3em;
-            margin-left: 2.5%;
-            margin-right: 7.5%;
-            line-height: 150%;
-        }
-        .pro-txt {
-            width: 40%;
-            font-family:"helvetica-43-light-extended";
-            font-size: 1.3em;
-            padding-left: 2em;
-            line-height: 150%;
-        }
-        .final {
-            width: 60%;
-            height: auto;
-        }
-        .txt {
-            font-family:"helvetica-43-light-extended";
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        img:first-child {
-            width: 50%;
-        }
-        img:nth-child(2) {
-            width: 50%;
-        }
+        
         span {
-            font-family: 'Helvetica73', sans-serif;
+            font-family:"helvetica-73-bold-extended";
             font-size: 2em;
             -webkit-text-stroke-width: 1.4px;
             -webkit-text-stroke-color: black;
         }
-        .prototype{
-            width: 80%;
-            padding-top: 1.5em;
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            border-top: 1px solid black;
+        }
+        .item:nth-child(2) {
+            width: 70%;
+            margin-right: -2px;
+            border-left: 1px solid black;
+        }
+        
+        .ttt {
+            width: 30%;
+        }
+        .case {
             font-family:"helvetica-43-light-extended";
-            font-size: 1.3em;
-            padding-left: 1.7em;
+            font-size: 1em;
             line-height: 150%;
-            padding-bottom: 10em;
+            padding-left: 5%;
+            width: 90%;
+            padding-bottom: 5%;
+        }
+        .ttt2 {
+            width: 30%;
+        }
+        .item2 {
+            width: 70%;
+            border-left: 1px solid black;
+            margin-right: -1px;
+        }
+        h3 {
+            font-family:"helvetica-73-bold-extended";
+            font-size: 1.5em;
+            margin: 2% 5%;
+            margin-bottom: 5%;
+            text-align: left;
+        }
+        .make_txt {
+            padding: 10% 0;
+            padding-left: 30%;
+            width: 40%;
+            font-family:"helvetica-43-light-extended";
+            font-size: 1.1em;
+            line-height: 150%;
+        }
+        .ttt3 {
+            width: 30%;
+        }
+        .item3 {
+            width: 70%;
+            border-left: 1px solid black;
+            margin-right: -1px;
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+        }
+        .item2 img {
+            width: 100%;
+            height: 100%;
+        }
+        .item3 img {
+            width: 100%;
+            height: 100%;
         }
 
-        @media screen and (max-width:900px) {
+        .footer {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 22vh;
+                border-top: 1px solid black;
+            }
+            .ftr:first-child {
+                width: 30%;
+                border-right :1px solid black;
+                margin-right: -2px;
+                height: 22vh;
+            }
+            .ftr:nth-child(2) {
+                width: 50%;
+                border-right :1px solid black;
+                margin-right: -2px;
+                height: 22vh;
+            }
+            .ftr:nth-child(3) {
+                width: 20%;
+                height: 22vh;
+            }
+            h4 {
+                font-family:"helvetica-73-bold-extended";
+                font-size: 1.3em;
+                margin-top: 2%;
+                padding-left: 2%;
+                padding-bottom: 10%;
+            }
+            .contact {
+                text-decoration: none;
+                color: black;
+            }
+            .ftr_c {
+                display: flex;
+                flex-direction: column;
+                padding-left: 2%;
+                font-size: 1.1em;
+                font-family:"helvetica-43-light-extended";
+                line-height: 1.3em;
+            }
 
+            .ftr_t {
+                padding-bottom: 2%;
+            }
+            .ftr_t:hover {
+                cursor: pointer;
+                color: red;
+            }
+
+        @media screen and (max-width:900px) {
+            .btn_2 {
+                font-size: 1em;
+                padding-right: 5%;
+            }
             .text_box {
-                padding-top: 10em;
+                padding-top: 5em;
                 padding-bottom: 5em;
             }
             .blink {
-                font-size: 4em;
+                font-size: 6em;
             }
             h2 {
                 font-size: 4em;
@@ -152,12 +262,7 @@
             .flexbox {
                 flex-direction: column;
             }
-            img:first-child {
-                width: 100%;
-            }
-            img:nth-child(2) {
-                width: 100%;
-            }
+
             .pro-txt {
                 width: 80%;
             }
@@ -171,61 +276,161 @@
             .final {
                 margin-bottom: 2em;
             }
+            .container {
+                flex-direction: column-reverse;
+            }
+            .ttt {
+                width: 100%;
+                border-right: none;
+            }
+            .ttt2 {
+                width: 100%;
+                border-bottom: 1px solid black;
+            }
+            .ttt3 {
+                width: 100%;
+                border-top: 1px solid black;
+                margin-top: -4px;
+            }
+            .item:nth-child(2) {
+                width: 100%;
+            }
+            .item2:nth-child(2) {
+                width: 100%;
+            }
+            .item3 {
+                width: 100%;
+                height: 100%;
+                border-left: none;
+            }
+            .make_txt {
+                width: 60%;
+                padding-left: 20%;
+                border-top: none;
+            }
+            .footer {
+            border-top: 1px solid black;
+        }
+        .ftr:first-child {
+                width: 60%;
+                margin-left: -1px;
+            }
+        .ftr:nth-child(3) {
+                width: 40%;
+                padding-left: 1%;
+                margin-right: -1%;
+            }
+        .ftr:nth-child(2) {
+            display: none;
+            }
+            h4 {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
 <body>
-    <div>
-        <p class="back" onclick="location.href='design.html'">&larr; Back to Design</p>
+    <script>
+        AOS.init();
+      </script>
+    <div class="box-wrap">
+        <div class="btn" onclick="location.href='index.html'"><img src="barcode.png" style="height: 4vh; padding: 0.4em" id="bar"></div>
+        <div class="btn">
+            <a class="btn_2" href="about.html">About</a>
+            <a class="btn_2" href="design.html">Design</a>
+            <a class="btn_2" href="work.html">Work</a>
+        </div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
+        <div class="btn" onclick="location.href='work.html'"><i class="fa-sharp fa-solid fa-hashtag"></i></div>
     </div>
     <div class="text_box">
         <h2 class="text"></h2>
         <span class="blink">|</span>
         <script src="script_ddp.js"></script>
     </div>
-    <div>
-        <h4>#1. Prototype</h4>
+    <div class="container">
+        <div class="ttt" data-aos="fade-right" data-aos-duration="800">
+            <h3>Prototype</h3>
+            <p class="case">
+                Pursue a neat, simple, yet witty design.
+                For purchase inquiries, click the button below!
+            </p>
+        </div>
+        <div class="item" >
+            <img src="ddp_prototype.png" data-aos="fade-left" data-aos-duration="800">
+        </div>      
     </div>
-    <div class="flexbox">
-        <img src="ddp_case.png">
-        <img src="ddp_prototype.png">
-        <p class="prototype">
-            I planned two products, 
-            iPhone and iPad case, reflecting my experience of purchasing a cell phone and tablet 
-            first than anything else as soon as I became a college student. 
-            The overall design borrows the receipt design, which serves as a token 
-            of purchase and an archive of memories that evokes small memories of the day.
+    <div class="container" style="border-top: 1px solid black;">
+        <div class="ttt2" data-aos="fade-right" data-aos-duration="800">
+            <h3>Making Process</h3>
+            <p class="case">
+                Pursue a neat, simple, yet witty design.
+                For purchase inquiries, click the button below!
+            </p>
+        </div>
+        <div class="item2">
+            <img src="making1.jpg" style="width: 100%; height: 100%;" data-aos="fade-left" data-aos-duration="800">
+        </div>
+    </div>
+    <div style="border-top: 1px solid black;">
+        <p class="make_txt" data-aos="fade-down" data-aos-duration="800">
+            Pursue a neat, simple, yet witty design.
+            For purchase inquiries, click the button below! <br>
+            Pursue a neat, simple, yet witty design.
+            For purchase inquiries, click the button below!<br>
+            Pursue a neat, simple, yet witty design.
+            For purchase inquiries, click the button below!<br>
         </p>
     </div>
-    <h4>#2. Process</h4>
-    <div class="flexbox">
-        <img src="making1.jpg" class="pro">
-        <p class="pro-txt">
-            The fabric and all parts were purchased in the Sinseol-dong market, 
-            and the sample production was completed in the market.
-        </p>
+    <div class="container" style="border-top: 1px solid black;">
+        <div class="ttt3" data-aos="fade-right" data-aos-duration="800">
+            <h3>Final Product</h3><br>
+            <p class="case">
+                1. I-Phone Case <br>
+                Two types: Transparent Jelly & Hard <br>
+                Two versions: Contains Object itself & No graphic in the middle (Use with Grip-tok)
+                <br><br>
+                2. I-Pad Pouch <br>
+                Material: Tyvek, Toilon, Suede <br>
+                Feature: Can be easily opened and closed with the zipper on the top, and has a band to 
+                insert an apple pencil. 
+                <br><br>
+                3. Tyvek Eco-Bag <br>
+                Material: Tyvek, Toilon, Nylon <br>
+                Feature: Eco-friendly by using tyvek material and contains 
+                buffer materials in order to protect items inside the bag.
+            </p>
+        </div>
+        <div class="item3">
+            <img src="product.png" data-aos="fade-left" data-aos-duration="800">
+        </div>
     </div>
-    <h4 style="padding-top: 7em;">#3. Final Products</h4>
-    <div class="flexbox3">
-        <p class="final-txt">
-            <span class="txt">1. I-Phone Case</span> <br>
-            Two types: Transparent Jelly & Hard <br>
-            Two versions: Contains Object itself & No graphic in the middle (Use with Grip-tok)
-            <br><br>
-            <span class="txt">2. I-Pad Pouch</span> <br>
-            Material: Tyvek, Toilon, Suede <br>
-            Feature: Can be easily opened and closed with the zipper on the top, and has a band to 
-            insert an apple pencil. 
-            <br><br>
-            <span class="txt">3. Tyvek Eco-Bag</span> <br>
-            Material: Tyvek, Toilon, Nylon <br>
-            Feature: Eco-friendly by using tyvek material and contains 
-            buffer materials in order to protect items inside the bag.
-        </p>
-        <img src="product.png" class="final">
+    <div class="container" style="border-top: 1px solid black;">
+        <div class="ttt3" data-aos="fade-right" data-aos-duration="800">
+            <h3>Display</h3>
+            <p class="case">
+                whalskdjlkfjkljasdklfj
+            </p>
+        </div>
+        <div class="item3">
+            <img src="display1.jpg" data-aos="fade-left" data-aos-duration="800">
+        </div>
     </div>
-    <h4 style="padding-top: 7em;">#4. Display</h4>
-    <div class="flexbox" style="margin-bottom: 10em;">
-        <img src="display1.jpg" style="width:49%; height: auto; margin-right: 2%;">
-        <img src="display2.jpg" style="width:49%; height: auto;">
-    </div>
+  
+    <div class="footer">
+        <div class="ftr">
+            <h4>GENEWIN_STUDIO</h4>
+            <div class="ftr_c">
+            <p style="width: 80%;">This website was created as a final assignment for the Network Media class</p>
+            </div>
+        </div>
+        <div class="ftr"></div>
+        <div class="ftr">
+            <h4>CONTACT</h4>
+            <div class="ftr_c">
+                <p onclick="location.href='#'" class="ftr_t"><i class="fa-brands fa-square-instagram"></i>&nbsp;Instagram</p>
+                <p onclick="location.href='#'" class="ftr_t"><i class="fa-brands fa-youtube"></i>&nbsp;Youtube</p>
+                <p onclick="location.href='#'" class="ftr_t"><i class="fa-sharp fa-solid fa-envelope"></i>&nbsp;E-Mail</p>
+            </div>
+        </div>
+        </div>
