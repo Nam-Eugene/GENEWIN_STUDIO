@@ -32,7 +32,14 @@
             font-family:"helvetica-43-light-extended";
             src:url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("woff"),
             url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("opentype"),
-            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");}
+            url("https://candyfonts.com/wp-data/2019/04/06/51278/HelveticaNeue-LightExt.otf") format("truetype");
+        }
+        @font-face {
+            font-family:"helvetica-73-bold-extended";
+            src:url("https://candyfonts.com/wp-data/2019/04/06/51383/HelveticaNeue-BoldExt.otf") format("woff"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51383/HelveticaNeue-BoldExt.otf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2019/04/06/51383/HelveticaNeue-BoldExt.otf") format("truetype");
+        }
         * {
             margin: 0;
             padding: 0;
@@ -97,7 +104,7 @@
         }
 
         .text_box {
-            font-family: 'Helvetica73', sans-serif;
+            font-family:"helvetica-73-bold-extended";
             padding-left: 0;
             padding-top: 15em;
             padding-bottom: 20em;
@@ -131,24 +138,26 @@
         }
 
         .contents {
+            margin-top: 5%;
             color: black;
-            float: left;
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.3em;
             font-family:"helvetica-43-light-extended";
         }
         span {
-            font-family: 'Helvetica73', sans-serif;
+            font-family:"helvetica-73-bold-extended";
             font-size: 2em;
         }
 
         .art {
             width: 100%;
+            height: 100%;
             margin-bottom: -0.3%;
             object-fit: contain;
         }
         .ddp {
             width: 100%;
+            height: 100%;
             margin-bottom: -0.2%;
             object-fit: contain;
         }
@@ -160,7 +169,7 @@
         .ttt {
             width: 70%;
             border-left: 1px solid black;
-            margin-right: -1px;
+            margin-left: 1px;
         }
         .bbb {
             width: 28%;
@@ -177,7 +186,7 @@
         }
         .xpp {
             color: black;
-            font-family: 'Helvetica73', sans-serif;
+            font-family:"helvetica-73-bold-extended";
             font-size: 2em;
             font-weight: bolder;
             padding-top: 0.5em;
@@ -221,8 +230,8 @@
             white-space: nowrap;
             overflow: hidden;
             transition: 0.3s;
-            font-family: 'Helvetica73', sans-serif;
-            font-size: 5em;
+            font-family:"helvetica-73-bold-extended";
+            font-size: 4em;
             color: black;
             padding: 1em 0;
             border-bottom: 1px solid black;
@@ -253,24 +262,24 @@
                 width: 30%;
                 border-right :1px solid black;
                 margin-right: -2px;
-                height: 100%;
+                height: 22vh;
             }
             .ftr:nth-child(2) {
                 width: 50%;
-                border-right: 1px solid black;
+                border-right :1px solid black;
                 margin-right: -2px;
-                height: 100%;
+                height: 22vh;
             }
             .ftr:nth-child(3) {
                 width: 20%;
-                height: 100%;
+                height: 22vh;
             }
             h4 {
-                font-family: 'Helvetica73', sans-serif;
-                font-size: 1.5em;
+                font-family:"helvetica-73-bold-extended";
+                font-size: 1.3em;
                 margin-top: 2%;
                 padding-left: 2%;
-                padding-bottom: 5%;
+                padding-bottom: 10%;
             }
             .contact {
                 text-decoration: none;
@@ -278,21 +287,19 @@
             }
             .ftr_c {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 padding-left: 2%;
                 font-size: 1.1em;
                 font-family:"helvetica-43-light-extended";
-                line-height: 1.3em;;
+                line-height: 1.3em;
             }
-            .ftr_item {
-                width: 33.33%;
+
+            .ftr_t {
+                padding-bottom: 2%;
             }
-            .ftr_item:nth-child(2) {
-                text-align: center;
-            }
-            .ftr_item:nth-child(3) {
-                text-align: right;
-                padding-right: 2%;
+            .ftr_t:hover {
+                cursor: pointer;
+                color: red;
             }
             .more {
                 font-size: 1.1em;
@@ -310,6 +317,10 @@
                 display: flex;
                 flex-direction: column-reverse;
             }
+            .btn_2 {
+                font-size: 1em;
+                padding-right: 5%;
+            }
             .b2 {
                 width: 100%;
                 height: auto;
@@ -318,48 +329,85 @@
                 width: 100%;
             }
             .text_box {
-                padding-top: 10em;
+                padding-top: 5em;
                 padding-bottom: 5em;
             }
             .blink {
                 font-size: 6em;
             }
             h2 {
-                font-size: 6em;
+                font-size: 4em;
                 text-align: left;
+                padding-top: 0.5em;
                 padding-bottom: 0.5em;
             }
             span {
-                font-size: 2em;
+                font-size: 1.5em;
             }
             p.contents {
                 padding-left: 1em;
                 width: 80%;
-                padding-top: 1em;
                 padding-bottom: 2em;
-                font-size: 1.2em;
+                font-size: 1em;
+            }
+            .absolute {
+                border-bottom: 1px solid black;
+            }
+            .flow-text {
+                font-size: 1.3em;
+                padding: 0.5em 0;
+            }
+            .container {
+                flex-direction: column-reverse;
             }
             .ttt {
-                width: 65%;
+                width: 100%;
+                border-left: none;
             }
             .bbb {
-                width: 35%;
+                width: 100%;
+                padding-bottom: 5%;
                 margin: auto;
+            }
+            .more {
+                padding-left: 1.1em;
+                font-size: 1em;
+            }
+            .art {
+                border-bottom: 1px solid black;  
+            }
+            .ddp {
+                border-bottom: 1px solid black;
             }
             .xpp {
                 padding-left: 0.6em;
-                font-size: 1.8em;
+                font-size: 1.5em;
                 font-weight: bolder;
                 padding-top: 0.5em;
             }
             .xpp_c {
-                font-size: 1.2em;
-                padding-left: 1em;
-                padding-bottom: 0.8em;
+                width: 80%;
+                font-size: 1.1em;
+                padding-left: 0.9em;
+                padding-bottom: 2em;
             }
             .xpp_btn {
                 font-size: 1.2em;
                 margin-left: 0.9em;
+            }
+            .ftr:first-child {
+                width: 60%;
+            }
+            .ftr:nth-child(3) {
+                width: 40%;
+                padding-left: 1%;
+                margin-right: -1%;
+            }
+            .ftr:nth-child(2) {
+                display: none;
+            }
+            h4 {
+                font-size: 1.3em;
             }
         }
     </style>
@@ -386,9 +434,9 @@
     
     <div id="box">
         <div class="b1">
-            <p class="contents" data-aos="fade-right" data-aos-offset="300" data-aos-duration="800"><span>Eugene Nam</span><br><br><br>
-            Nam Yu-jin is attending Sogang University's Department of Art and Technology.
-            She is mainly working on UI/UX and 2D graphic design. <br><br>
+            <p class="contents" data-aos="fade-right" data-aos-offset="300" data-aos-duration="800"><span>Eugene Nam</span><br><br><br><br>
+            Nam Yu-jin is attending Sogang University's Department of Art and Technology<br><br>
+            
             Inspired by pure and beautiful things, <br>
             dreaming of someday becoming a person like a mushroom soup full of forest scent, 
             like a sunset reflected on the outer wall of the building.</p>       
@@ -439,24 +487,19 @@
         <div class="ftr">
             <h4>GENEWIN_STUDIO</h4>
             <div class="ftr_c">
-            <p>This website was created as a final assignment for the Network Media class</p>
+            <p style="width: 80%;">This website was created as a final assignment for the Network Media class</p>
             </div>
         </div>
         <div class="ftr"></div>
         <div class="ftr">
             <h4>CONTACT</h4>
             <div class="ftr_c">
-                <div class="ftr_item">
-                    <a href="https://www.instagram.com/genewin_studio/"class="contact"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
-                </div>
-                <div class="ftr_item">
-                     <a href="https://www.youtube.com/channel/UCfA4tjvwjLIwl52sE6A7ndw" class="contact" style="color: red;"><i class="fa-brands fa-youtube fa-2x"></i></a>
-                </div>
-                <div class="ftr_item">
-                    <a href="mailto:skadbwls79@naver.com" class="contact" style="color: navy"><i class="fa-sharp fa-solid fa-envelope fa-2x"></i></a>
-                </div>
+                <p onclick="location.href='#'" class="ftr_t"><i class="fa-brands fa-square-instagram"></i>&nbsp;Instagram</p>
+                <p onclick="location.href='#'" class="ftr_t"><i class="fa-brands fa-youtube"></i>&nbsp;Youtube</p>
+                <p onclick="location.href='#'" class="ftr_t"><i class="fa-sharp fa-solid fa-envelope"></i>&nbsp;E-Mail</p>
+            </div>
         </div>
         </div>
-    </div>
+        <a href="#" class="up"></a>
 </body>
 </html>
